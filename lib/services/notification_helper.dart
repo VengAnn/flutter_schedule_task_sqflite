@@ -69,7 +69,7 @@ class NotificationHelper {
 
   scheduledNotification(int hour, int minutes, Task task) async {
     try {
-      print("Scheduling notification...");
+      debugPrint("Scheduling Daily notification...");
 
       const AndroidNotificationDetails androidPlatformChannelSpecifics =
           AndroidNotificationDetails(
@@ -97,7 +97,7 @@ class NotificationHelper {
         payload: "${task.title}| ${task.note}|",
       );
 
-      debugPrint("Notification scheduled.");
+      debugPrint("Notification Dialy scheduled.");
     } catch (e, stacktrace) {
       debugPrint("Error scheduling notification: $e");
       debugPrint("Stacktrace: $stacktrace");

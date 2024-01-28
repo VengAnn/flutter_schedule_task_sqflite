@@ -34,12 +34,16 @@ class NotifiedPage extends StatelessWidget {
             borderRadius: BorderRadius.circular(Dimensions.radius15),
             color: Get.isDarkMode ? Colors.white : Colors.grey[400],
           ),
-          child: Text(
-            // this split to get note task form notification pyload
-            // ignore: unnecessary_this
-            this.label.toString().split("|")[1],
-            style: TextStyle(
-              color: Get.isDarkMode ? Colors.black : Colors.white,
+          child: Center(
+            child: Text(
+              // this split to get note task form notification pyload
+              // ignore: unnecessary_this
+              this.label.toString().split("|")[1],
+              style: TextStyle(
+                color: Get.isDarkMode
+                    ? Colors.black
+                    : Colors.white.withOpacity(0.7),
+              ),
             ),
           ),
         ),
