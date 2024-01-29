@@ -39,8 +39,8 @@ class _AddTaskPageState extends State<AddTaskPage> {
   List<String> repeatList = [
     "None",
     "Dialy",
-    "Weekly",
-    "Monthly",
+    // "Weekly",
+    // "Monthly",
   ];
 
   @override

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_schedule_with_sqlite/ui/pages/about_develop_page.dart';
 import 'package:flutter_schedule_with_sqlite/ui/pages/setting_page.dart';
 import 'package:flutter_schedule_with_sqlite/utils/dimensions.dart';
 import 'package:get/get.dart';
@@ -17,12 +18,18 @@ class MyDrawer extends StatelessWidget {
             child: Icon(Icons.person),
           ),
 
-          // home tilte
+          // About Develop
           Padding(
-            padding: EdgeInsets.only(top: Dimensions.height10, left: 15.0),
-            child: const ListTile(
-              title: Text("home"),
-              leading: Icon(Icons.home),
+            padding: EdgeInsets.only(
+                top: Dimensions.height10, left: Dimensions.width10),
+            child: GestureDetector(
+              onTap: () {
+                Get.to(() => const AboutDevelopPage());
+              },
+              child: const ListTile(
+                title: Text("About Develop"),
+                leading: Icon(Icons.tips_and_updates),
+              ),
             ),
           ),
 
